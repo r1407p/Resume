@@ -1,0 +1,175 @@
+
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Chia-Yu Tseng} \\
+\textcolor[HTML]{0000cd}{\underline{\href{mailto:buszter0403@gmail.com
+}{\raisebox{-0.05\height}{\faEnvelope} buszter0403@gmail.com}} $|$}
+\textcolor[HTML]{0000cd}{\href{tel:+525513219900}{\raisebox{-0.05\height}{\faMobile} +886 978790636}}
+
+\textcolor[HTML]{0000cd}{\underline{\href{https://github.com/r1407p}{\raisebox{-0.05\height}{\faGithub} github.com/r1407p}} $|$}
+\textcolor[HTML]{0000cd}{\underline{\href{https://www.linkedin.com/in/chia-yu-tseng-316034248/}{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/chia-yu-tseng-316034248/}}}
+\end{tabularx}
+% Education
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{National Yang Ming Chiao Tung University} & \hfill \color[HTML]{371e77} Hsinchu, Taiwan \\
+\color[HTML]{371e77} \textit{B.S. in Computer Science  $|$ GPA: 4.3 /4.3 (Major), 4.27 /4.3 (overall)} & \hfill \color[HTML]{4B28A4} \textit{\textbf{Jul. 2021 - Present }} \\
+\multicolumn{2}{@{}X@{}}{Relevant Courses: DS and OOP, Introduction to Algorithm, Competitive programming, Introduction to Computer Network, Introduction to Database Systems, Introduction to Artificial Intelligence, Introduction to Formal Language.}
+\end{tabularx}
+\section{Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{0000cd} \textbf{\uline{\href{https://www.advantech.com/zh-tw}{Advantech}}} \hfill \color[HTML]{371e77} Python, Fastapi, MongoDB, GraphQL, Docker, Grafana, JavaScript, LangChain, Langflow \\ 
+\color[HTML]{371e77}\textbf{\textit{Research \& Development Intern at DataAI }}\ \hfill \color[HTML]{4B28A4} \textit{Jun. 2023 - Present} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Retrieved and processed sensor data from the database, including data cleaning and statistical analysis. Developed APIs to serve as Grafana data sources. 
+        \item Designed and implemented Grafana panels to visualize the topological structure of the factory and machine system.
+        \item Spearheaded the design and implementation of the Langflow application, creating custom component nodes for enhanced functionality.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{0000cd} \textbf{\uline{\href{https://github.com/Official-Meichu-Hackathon}{2022, 2023 Meichu Hackathon}}} \hfill \color[HTML]{371e77}Vue.js, React.js, TailwindCSS, MongoDB, AWS, Django  \\
+\color[HTML]{371e77}\textbf{\textit{Minister of the Development Department}}\ \hfill \color[HTML]{4B28A4} \textit{Mar. 2022 - Oct. 2023 } \\[2pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Led a team of 6 members in discussions with companies on the competition topic.
+        \item Developed a LineBot for competition-related communication, designed and implemented the signup website, and managed the ten-year server. Additionally, conducted code reviews for team members.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{0000cd} \textbf{\uline{\href{https://github.com/Official-Meichu-Hackathon}{Vision and Learning Lab}}} \hfill \color[HTML]{371e77} Python, Pytorch, Transformer, Facial Landmark Detection \\
+\color[HTML]{371e77}\textbf{\textit{Research Assistant}} \hfill \color[HTML]{4B28A4} \textit{June. 2023 - Present} \\
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Received guidance from Prof. Yen-Yu Lin for a research project focused on facial landmark detection. %Employed transformer models and heatmaps in the study.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+% Projects
+\section{Projects}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{0000cd} \textbf{\uline{\href{https://tenyear.meichuhackathon.org/}{Meichu Hackathon ten year server}}} \color[HTML]{371e77} (Vue.js, Tailwind CSS, Express.js, MongoDB, Postman, AWS)  \hfill \color[HTML]{371e77} (\href{https://github.com/}{Website}, \href{https://github.com/orgs/Official-Meichu-Hackathon/repositories}{github})\\ 
+\color[HTML]{371e77}\textbf{\textit{Platform for documenting Meichu Hackathon and showcasing participants' projects.}} \hfill \color[HTML]{4B28A4} \textit{Sep. 2022} \\[2pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Implemented the backend using Express.js as the framework, MongoDB as the database, and deployed the service on AWS. Utilized Postman for comprehensive APIs. 
+        \item Achieved Responsive Web Design (RWD) with Vue.js and Tailwind CSS for an optimized and user-friendly interface.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{0000cd} \textbf{\uline{\href{https://fr-og-nasahackathon-1b6k-8gn495ml7-icesplendents-projects.vercel.app/}{Nasa Hackathon Ocean guarden-frOG}}} \color[HTML]{371e77} (vue.js, TailwindCss, Three.js ) \hfill \color[HTML]{0000cd}(\href{https://fr-og-nasahackathon-1b6k-8gn495ml7-icesplendents-projects.vercel.app/game}{website}, \href{https://github.com/icesplendent/frOG-NASAHACKATHON}{github}) \\
+\color[HTML]{371e77}\textbf{\textit{A platform-based RPG game emphasizing the significance of the ocean. }} \hfill \color[HTML]{4B28A4} \textit{Aug. 2023} \\[2pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Utilized three.js and Vue.js to develop an interactive Earth allowing users to toggle and zoom in/out.
+        \item Clearly presented ocean data, enabling users to select both the desired time and location.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{0000cd} \textbf{\uline{\href{https://github.com/r1407p/Human-pose-estimation}{Human post estimator}}} \color[HTML]{371e77} (python, pytorch, opencv) \hfill \color[HTML]{0000cd}\href{https://github.com/r1407p/Human-pose-estimation}{ (github)} \\
+\color[HTML]{371e77}\textbf{\textit{An AI program designed to assess and determine whether your current posture is correct or not. }} \hfill \color[HTML]{4B28A4} \textit{May. 2023} \\[2pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Constructed a model using MovNet in conjunction with CNN, DNN, and MLP to form a multi-classifier.
+        \item Mapped the journey from an input picture to human pose points, thereby evaluating the correctness of the posture.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+\section{Awards}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{Silver medal |} silver medal of  2023 NASA Hackathon at Taichung Region 
+        \item \textbf{Bronze medal |} Bronze medal of The 2023 ICPC Asia Taoyuan Regional Programming Contest, Fourty-fifth place out of 100 teams. 
+        \item \textbf{Silver medal |} Sensing AIOT System Application Idea Competition
+        \item \textbf{Academic Achievement Awards(Top 5\%) | }  Fall 2021 ( GPA 4.24 ), Spring 2022 ( GPA 4.25 ), Fall 2022 ( GPA 4.27 ), Spring 2023 ( GPA 4.3 )
+        \item  \textbf{Foundation Academic course Awards(Top 5\%) |} Linear Algebra, Discrete Mathematics, Data Structure And Object Oriented Programming.        
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+\section{Extracurricular Activities}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\uline{{NYCU Computer Science Student Association}}}  \\
+\color[HTML]{371e77}\textbf{\textit{Co-leader of Information Group}} \hfill \color[HTML]{4B28A4} \textit{Jul. 2023 - Present} \\
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Led 3 members to maintain the service provided by the student association, including past exam system, introduction of CS department for high school and several web services.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\uline{{NYCU Google Developer Student Clubs}}}  \\
+\color[HTML]{371e77}\textbf{\textit{Co-leader of Technical Team}} \hfill \color[HTML]{4B28A4} \textit{Sep. 2023 - Present} \\
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Led 8 members to learn the fundamentals of computer vision and its applications.
+        \item Collaborated with team members to develop and complete a cutting-edge computer vision project.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+\end{document}
+
